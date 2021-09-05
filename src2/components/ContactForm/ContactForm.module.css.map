@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAIA,AAAA,MAAM,CAAC;EACL,OAAO,EAAE,KAAK;EACd,aAAa,EAAE,IAAI;EACnB,SAAS,EAAE,IAAI;EACf,WAAW,EAAE,GAAG;CACjB;;AAED,AAAA,MAAM,CAAC;EACL,OAAO,EAAE,IAAI;EACb,UAAU,EAAE,IAAI;CACjB",
-    "sources": [
-        "ContactForm.module.scss"
-    ],
-    "names": [],
-    "file": "ContactForm.module.css"
-}
