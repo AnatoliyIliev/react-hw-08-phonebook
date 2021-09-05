@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,GAAG,CAAC;EACF,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,aAAa;EAC9B,MAAM,EAAE,GAAG;CACZ;;AAED,AAAA,GAAG,CAAC;EACF,OAAO,EAAE,KAAK;EACd,OAAO,EAAE,CAAC;EACV,KAAK,EAAE,KAAK;CACb;;AAED,AAAA,OAAO,CAAC;EACN,MAAM,EAAE,IAAI;EACZ,KAAK,EAAE,IAAI;EACX,SAAS,EAAE,GAAG;CACf",
+    "sources": [
+        "ContactList.module.scss"
+    ],
+    "names": [],
+    "file": "ContactList.module.css"
+}

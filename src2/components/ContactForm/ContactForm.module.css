@@ -1,0 +1,14 @@
+.label {
+  display: block;
+  margin-bottom: 15px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 10px;
+}
+/*# sourceMappingURL=ContactForm.module.css.map */
