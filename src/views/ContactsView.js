@@ -20,9 +20,6 @@ export default function ContactsView(params) {
   const dispatch = useDispatch();
   const isLoadingContacts = useSelector(contactsSelectors.getLoading);
 
-  //   const [isModalOpen, setIsModalOpen] = useState(false);
-  //   const toggleModal = () => setIsModalOpen(state => !state);
-
   useEffect(() => dispatch(contactsOperations.fetchContacts()), [dispatch]);
 
   return (
