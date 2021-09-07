@@ -3,8 +3,8 @@ import { Redirect, Route } from 'react-router';
 import { authSelectors } from '../redux/auth';
 
 export default function PrivateRoute({
-  component: Cpmponent,
-  redirectTo,
+  // component: Cpmponent,
+  redirectTo = '/',
   children,
   ...routeRrops
 }) {
@@ -12,6 +12,7 @@ export default function PrivateRoute({
   return (
     <Route {...routeRrops}>
       {isLoggedIn ? children : <Redirect to={redirectTo} />}
+      {/* {isLoggedIn ? children : <Redirect to="/login" />} */}
     </Route>
   );
 }
