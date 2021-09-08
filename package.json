@@ -1,9 +1,12 @@
 {
-  "name": "react-hw-07-phonebook",
+  "name": "react-hw-08-phonebook",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://AnatoliyIliev.github.io/react-hw-07-phonebook",
+  "homepage": "https://AnatoliyIliev.github.io/react-hw-08-phonebook",
   "dependencies": {
+    "@material-ui/core": "^4.12.3",
+    "@material-ui/icons": "^4.11.2",
+    "@material-ui/lab": "^4.0.0-alpha.60",
     "@reduxjs/toolkit": "^1.6.1",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
@@ -19,6 +22,7 @@
     "react-redux": "^7.2.4",
     "react-router-dom": "^5.3.0",
     "react-scripts": "4.0.3",
+    "redux": "^4.1.1",
     "redux-logger": "^3.0.6",
     "redux-persist": "^6.0.0",
     "uuid": "^8.3.2",

@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import React, { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import styles from './ContactForm.module.scss';
-import { contactsOperations, contactsSelectors } from '../../redux';
+import { contactsOperations, contactsSelectors } from '../../redux/contacts';
 
 function ContactForm({ onSubmit, isLoadingContacts }) {
   const [name, setName] = useState('');
@@ -81,6 +81,7 @@ ContactForm.propTypes = {
 };
 
 const mapStateToProps = state => ({
+  contacts: contactsSelectors.getAllContacts(state),
   isLoadingContacts: contactsSelectors.getLoading(state),
 });
 

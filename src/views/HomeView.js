@@ -6,6 +6,7 @@ const styles = {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
+    color: 'white',
   },
   title: {
     fontWeight: 500,
@@ -17,7 +18,7 @@ const styles = {
 const HomeView = () => (
   <div style={styles.container}>
     <h1 style={styles.title}>
-      Приветственная страница нашего сервиса{' '}
+      Приветствуем в Вашей телефонной книге{' '}
       <span role="img" aria-label="Иконка приветствия">
         💁‍♀️
       </span>

@@ -23,7 +23,6 @@ const Navigation = () => {
       <NavLink to="/" exact style={styles.link} activeStyle={styles.activeLink}>
         Главная
       </NavLink>
-
       {isLoggedIn && (
         <>
           <NavLink
@@ -32,7 +31,7 @@ const Navigation = () => {
             style={styles.link}
             activeStyle={styles.activeLink}
           >
-            Главная
+            Заметки
           </NavLink>
           {/* <NavLink
             to="/upload"
@@ -44,15 +43,6 @@ const Navigation = () => {
           </NavLink> */}
         </>
       )}
-
-      {/* <NavLink
-      to="/todos"
-      exact
-      style={styles.link}
-      activeStyle={styles.activeLink}
-    >
-      Заметки
-    </NavLink> */}
     </nav>
   );
 };

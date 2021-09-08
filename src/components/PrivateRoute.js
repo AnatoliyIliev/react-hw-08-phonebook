@@ -4,15 +4,21 @@ import { authSelectors } from '../redux/auth';
 
 export default function PrivateRoute({
   // component: Cpmponent,
-  redirectTo = '/',
   children,
+  redirectTo = '/',
   ...routeRrops
 }) {
   const isLoggedIn = useSelector(authSelectors.getIsLoggedIn);
   return (
     <Route {...routeRrops}>
       {isLoggedIn ? children : <Redirect to={redirectTo} />}
-      {/* {isLoggedIn ? children : <Redirect to="/login" />} */}
     </Route>
   );
 }
+
+/**
+ * 1. Он должен повторять API Route
+ *  2. Он должен рендерить Route
+ * - Если маршрут приватный и пользователь залогинен, рендерит компонент
+ * - В противном случае рендерит Redirect на redirectTo
+ */

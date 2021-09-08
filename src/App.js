@@ -8,10 +8,18 @@ import AppBar from './components/AppBar';
 import PublicRoute from './components/PublicRoute';
 import PrivateRoute from './components/PrivateRoute';
 
-const HomeView = lazy(() => import('./views/HomeView'));
-const RegisterView = lazy(() => import('./views/LoginView'));
-const LoginView = lazy(() => import('./views/LoginView'));
-const ContactsView = lazy(() => import('./views/ContactsView'));
+const HomeView = lazy(() =>
+  import('./views/HomeView' /* webpackChunkName: "HomeView"*/),
+);
+const RegisterView = lazy(() =>
+  import('./views/RegisterView' /* webpackChunkName: "RegisterView" */),
+);
+const LoginView = lazy(() =>
+  import('./views/LoginView' /* webpackChunkName: "LoginView" */),
+);
+const ContactsView = lazy(() =>
+  import('./views/ContactsView' /* webpackChunkName: "ContactsView" */),
+);
 // const UploadView = lazy(() => import('./views/UploadView'));
 
 function App() {
@@ -23,35 +31,38 @@ function App() {
   }, [dispatch]);
 
   return (
-    !isFetchingCurrentUser && (
-      <Container>
-        <AppBar />
+    <Container>
+      {isFetchingCurrentUser ? (
+        <h1>Показываем React Skeleton</h1>
+      ) : (
+        <>
+          <AppBar />
+          <Switch>
+            <Suspense fallback={<p>Loading...</p>}>
+              <PublicRoute exact path="/">
+                <HomeView />
+              </PublicRoute>
 
-        <Switch>
-          <Suspense fallback={<div>Loading...</div>}>
-            <PublicRoute exact path="/">
-              <HomeView />
-            </PublicRoute>
+              <PublicRoute path="/register" restricted>
+                <RegisterView />
+              </PublicRoute>
 
-            <PrivateRoute exact path="/register" restricted>
-              <RegisterView />
-            </PrivateRoute>
+              <PublicRoute path="/login" redirectTo="/contacts" restricted>
+                <LoginView />
+              </PublicRoute>
 
-            <PrivateRoute exact path="/login" redirectTo="/contacts" restricted>
-              <LoginView />
-            </PrivateRoute>
+              <PrivateRoute path="/contacts" redirectTo="/login">
+                <ContactsView />
+              </PrivateRoute>
 
-            <PrivateRoute path="/contacts" redirectTo="/login">
-              <ContactsView />
-            </PrivateRoute>
-
-            {/* <PrivateRoute path="/upload" redirectTo="/login">
+              {/* <PrivateRoute path="/upload" redirectTo="/login">
               <UploadView />
             </PrivateRoute> */}
-          </Suspense>
-        </Switch>
-      </Container>
-    )
+            </Suspense>
+          </Switch>
+        </>
+      )}
+    </Container>
   );
 }
 

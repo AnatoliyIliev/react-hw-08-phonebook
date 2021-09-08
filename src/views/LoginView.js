@@ -12,6 +12,13 @@ const styles = {
     flexDirection: 'column',
     marginBottom: 15,
   },
+  center: {
+    color: 'white',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
 };
 
 export default function LoginView() {
@@ -38,7 +45,7 @@ export default function LoginView() {
   };
 
   return (
-    <div>
+    <div style={styles.center}>
       <h1>Страница логина</h1>
 
       <form onSubmit={handleSubmit} style={styles.form} autoComplete="off">
