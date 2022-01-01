@@ -6,7 +6,7 @@ const styles = {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    color: 'white',
+    // color: 'white',
   },
   title: {
     fontWeight: 500,

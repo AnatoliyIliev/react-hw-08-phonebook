@@ -13,7 +13,7 @@ const styles = {
     marginBottom: 15,
   },
   center: {
-    color: 'white',
+    // color: 'white',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
